@@ -1,0 +1,94 @@
+\documentclass{article} % JASA requires 12 pt font for manuscripts
+%\usepackage{JASA_manu}        % For JASA manuscript formatting
+\usepackage{times, asa, url}
+
+%\usepackage{endfloat} % just for while I am writing
+
+% for citations
+\usepackage[authoryear]{natbib} % natbib required for JASA
+% \usepackage[colorlinks=true, citecolor=blue, linkcolor=blue]{hyperref} % comment out and use url package for submission
+
+% for the fancy tables with the icons
+%\usepackage[margin=1.0in]{geometry}% http://ctan.org/pkg/margin
+\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+\usepackage{array}% http://ctan.org/pkg/array
+\newcolumntype{M}{>{\centering\arraybackslash}m{\dimexpr.05\linewidth-2\tabcolsep}}
+
+
+
+%\definecolor{Blue}{rgb}{0,0,0.5}
+\newcommand{\hh}[1]{{\color{magenta} #1}}
+\newcommand{\eh}[1]{{\color{red} #1}}
+\newcommand{\mm}[1]{{\color{blue} #1}}
+
+\newcolumntype{C}[1]{>{\centering}m{#1}}
+% fonts
+%\usepackage{kpfonts}
+
+% for figures
+\usepackage{graphicx}
+\DeclareGraphicsExtensions{.eps, .pdf}
+\graphicspath{{figure/}}
+
+\usepackage{wrapfig,float}
+\usepackage{caption}
+\usepackage{subcaption}
+
+% title formatting
+% \usepackage[compact,small]{titlesec}
+
+% page formatting
+\usepackage[margin = 1in]{geometry}
+% \usepackage[parfill]{parskip}
+
+% line spacing
+\usepackage{setspace}
+\doublespace
+
+% For math typsetting
+\usepackage{bm}
+\usepackage{amstext}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{multirow}
+
+% A few commands to make typing less tedious
+\newcommand{\inv}{\ensuremath{^{-1}}}
+\newcommand{\ginv}{\ensuremath{^{-}}}
+\newcommand{\trans}{\ensuremath{^\prime}}
+\newcommand{\E}{\ensuremath{\mathrm{E}}}
+\newcommand{\var}{\ensuremath{\mathrm{Var}}}
+\newcommand{\cov}{\ensuremath{\mathrm{Cov}}}
+
+
+\title{Battling gamers: lessons learned from online studies on visual inference}
+
+\author{Mahbubul Majumder, Eric Hare, Heike Hofmann
+\thanks{Mahbubul Majumder is an Assistant Professor in the Department of Mathematics, University of Nebraska Omaha, Omaha, NE 68182 (e-mail: mmajumder@unomaha.edu);  Eric Hare is a Ph.D. student in the Department of Statistics and Statistical Laboratory, Iowa State University, Ames, IA 50011-1210; Heike Hofmann is a Professor in the Department of Statistics and Statistical Laboratory, Iowa State University, Ames, IA 50011-1210. This work was funded in part by National Science Foundation grant DMS 1007697. All data  in the study was collected  with approval from the internal review board IRB 10-347.}}
+
+\pdfminorversion=4
+
+\begin{document}
+
+\maketitle
+\begin{abstract}
+
+Crowdsourcing methods open up huge possibilities for researchers. These services  create a forum for researchers and potential participants to come together, provide researchers with easy access to a large pool of participants. Compared to lab studies, there is virtually no overhead time for scheduling, online studies are very low-cost with short turn around times.
+
+The drawback of the online approach is the loss of control that we experience compared to a lab situation. As we do not directly observe the participant,  we can not make an assessment of a participant's intent in collaborating in the study, in particular we can not ``see" whether participants are trying their best in completing a study.
+This opens the door to individuals who are gaming the system and maximise their pay-off over meaningful answers.
+
+At the example of studies on visual inference we
+are discussing different strategies that we have employed to combat gaming.
+Visual inference based on the lineup test protocol is ideally suited for online evaluation. In the lineup protocol, participants are shown a set of usually 20 very similar looking figures of data. Nineteen of these figures are created from data coming out of a null model, while the last figure shows the observed data under consideration. This data figure is randomly inserted into the set of nulls and shown to participants, who are asked to identify the most different looking figure (hence the name `lineup protocol'). If a participant picks the data figure, this counts as evidence that the observed data is not consistent with the null model. Based on the probablity of random guessing, this allows a quantification of the significance of a graphical finding in form of a visual p-value. 
+
+Participants who are gaming the system, are a problem for all online studies. In our studies  about 5% of all participants' answers exhibit problematic symptoms. Identifying these participants is problematic in itself, because we obviously want to avoid accusing our participants wrongly, while at the same time minimize our problem with meaningless results.  
+In this paper we employ different strategies to identify gaming participants and minimizing their impact on the outcome of studies. 
+Based on results from Amazon MTurk studies on visual inference and simulation studies, we compare the effect of different filtering methods (filter plots, non-responses, time to answer) to modeling approaches using random effects for individuals' performance. 
+
+\keywords{Xxx, Yyy}
+\end{abstract}
+
+
+\end{document}
